@@ -8,6 +8,6 @@ router.post('/', createProduct)
 
 router.put('/:id',updateProduct)
 
-router.delete('/:id',Deleteproduct)
+// router.delete('/:id',Deleteproduct)
 
 module.exports = router

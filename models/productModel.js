@@ -11,19 +11,25 @@ const productSchema = mongoose.Schema(
             required: true
         },
         price: {
-            type: number,
+            type: Number,
             required: true
         },
         qty:{
-            type: number,
+            type: Number,
             required: true
         },
         description: {
             type: String,
             required: true
         },
-        images: []
+        images: [
+            {
+              filename: { type: String, required: true },
+              path: { type: String, required: true },
+              isMain: { type: Boolean, default: false },
+            },
+          ],
 
     });
 
-    module.exports = mongoose.model(productSchema)
+    module.exports = mongoose.model('ProductSchema', productSchema)
